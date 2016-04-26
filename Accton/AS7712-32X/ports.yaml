@@ -81,7 +81,7 @@ ports:
        subport_number:      1
     -  name:             "1-2"
        switch_device:      0
-       switch_device_port: 50
+       switch_device_port: 51
        parent_port:        1
        pluggable:          False
        connector:          QSFP28
@@ -93,7 +93,7 @@ ports:
        subport_number:      2
     -  name:             "1-3"
        switch_device:      0
-       switch_device_port: 50
+       switch_device_port: 52
        parent_port:        1
        pluggable:          False
        connector:          QSFP28
@@ -105,7 +105,7 @@ ports:
        subport_number:      3
     -  name:             "1-4"
        switch_device:      0
-       switch_device_port: 50
+       switch_device_port: 53
        parent_port:        1
        pluggable:          False
        connector:          QSFP28
