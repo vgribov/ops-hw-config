@@ -67,6 +67,8 @@ extern "C" {
 #define YAML_ACL_NAME "acl"           /*!< Name to identify acl file */
 #define YAML_THERMAL_NAME "thermal"   /*!< Name to identify thermal file */
 
+#define FRU_YAML_NOT_FOUND (-2) /* fru.yaml missing or not in manifest */
+
 /**
  * If defined, then the dscp map cos remark capability will be disabled.
  */
