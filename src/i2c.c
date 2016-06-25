@@ -212,7 +212,7 @@ i2c_do_smbus_io(int fd, i2c_op *cmd)
     return rc;
 }
 
-int
+static int
 i2c_execute(
     YamlConfigHandle handle,
     const char *subsyst,

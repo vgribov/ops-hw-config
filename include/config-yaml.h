@@ -805,18 +805,6 @@ extern int i2c_reg_write(YamlConfigHandle handle, const char *subsyst, const i2c
 extern int i2c_do_op(YamlConfigHandle handle, const char *subsyst, i2c_op *op);
 
 /************************************************************************//**
- * Performs the list of i2c commands for the specified i2c device
- *
- * @param[in] handle    :YamlConfigHandle for this subsystem
- * @param[in] subsyst   :Name of the subsystem
- * @param[in] device    :Device to operate on
- * @param[in] ops       :List of i2c commands to send to the device
- *
- * @return 0 on success, else errno on failure
- ***************************************************************************/
-extern int i2c_execute(YamlConfigHandle handle, const char *subsyst, const YamlDevice *device, i2c_op **ops);
-
-/************************************************************************//**
  * Returns info for a specific bus
  *
  * @param[in] handle    :YamlConfigHandle for this subsystem

@@ -24,30 +24,6 @@
 extern int ops_cnt;
 
 int
-i2c_execute(
-    YamlConfigHandle handle,
-    const char *subsyst,
-    const YamlDevice *dev,
-    i2c_op **cmds)
-{
-    int i = 0;
-
-    if ((handle != (YamlConfigHandle) NULL) &&
-                        (cmds != NULL) && (dev != NULL)) {
-        while (cmds[i] != NULL) {
-            i++;
-        }
-        ops_cnt += i;
-
-        printf("i2c_fake: %d i2c_op commands sent.\n", i);
-        printf("i2c_fake: Returning success for subsystem %s.\n", subsyst);
-        return 0;
-    } else {
-        return -1;
-    }
-}
-
-int
 i2c_reg_read(YamlConfigHandle handle,
              const char *subsyst,
              const i2c_bit_op *reg_op,
