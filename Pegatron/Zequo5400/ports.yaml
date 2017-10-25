@@ -1,0 +1,405 @@
+manufacturer:    Pegatron
+product_name:    Zequo5400
+version:         '1'
+
+port_info:
+    number_ports:    12
+    max_port_speed:  10000
+    max_transmission_unit: 1500
+    max_lag_count:         1024
+    max_lag_member_count:  64
+    L3_port_requires_internal_VLAN: True
+
+#  Import or reference devices.yaml file
+
+
+#  Note: We will need PHY information for future switches
+#        Should include an array of PHY descriptors
+#        and add info to port indicating the associated PHY
+
+ports:
+    - name:               5
+      switch_device:      0
+      switch_device_port: 4
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg5
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x11
+               bitmask:    0x10
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x19
+               bitmask:    0x10
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x15
+               bitmask:    0x10
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x17
+               bitmask:    0x10
+               polarity:   negative
+    - name:               6
+      switch_device:      0
+      switch_device_port: 5
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg6
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x11
+               bitmask:    0x20
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x19
+               bitmask:    0x20
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x15
+               bitmask:    0x20
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x17
+               bitmask:    0x20
+               polarity:   negative
+    - name:               7
+      switch_device:      0
+      switch_device_port: 6
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg7
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x11
+               bitmask:    0x40
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x19
+               bitmask:    0x40
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x15
+               bitmask:    0x40
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x17
+               bitmask:    0x40
+               polarity:   negative
+    - name:               8
+      switch_device:      0
+      switch_device_port: 7
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg8
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x11
+               bitmask:    0x80
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x19
+               bitmask:    0x80
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x15
+               bitmask:    0x80
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x17
+               bitmask:    0x80
+               polarity:   negative
+
+    - name:               9
+      switch_device:      0
+      switch_device_port: 8
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg9
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x10
+               bitmask:    0x01
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x18
+               bitmask:    0x01
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x14
+               bitmask:    0x01
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x16
+               bitmask:    0x01
+               polarity:   negative
+    - name:               10
+      switch_device:      0
+      switch_device_port: 9
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg10
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x10
+               bitmask:    0x02
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x18
+               bitmask:    0x02
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x14
+               bitmask:    0x02
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x16
+               bitmask:    0x02
+               polarity:   negative
+    - name:               11
+      switch_device:      0
+      switch_device_port: 10
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg11
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x10
+               bitmask:    0x04
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x18
+               bitmask:    0x04
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x14
+               bitmask:    0x04
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x16
+               bitmask:    0x04
+               polarity:   negative
+    - name:               12
+      switch_device:      0
+      switch_device_port: 11
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg12
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x10
+               bitmask:    0x08
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x18
+               bitmask:    0x08
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x14
+               bitmask:    0x08
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x16
+               bitmask:    0x08
+               polarity:   negative
+    - name:               13
+      switch_device:      0
+      switch_device_port: 12
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg13
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x10
+               bitmask:    0x10
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x18
+               bitmask:    0x10
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x14
+               bitmask:    0x10
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x16
+               bitmask:    0x10
+               polarity:   negative
+    - name:               14
+      switch_device:      0
+      switch_device_port: 13
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg14
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x10
+               bitmask:    0x20
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x18
+               bitmask:    0x20
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x14
+               bitmask:    0x20
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x16
+               bitmask:    0x20
+               polarity:   negative
+    - name:               15
+      switch_device:      0
+      switch_device_port: 14
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg15
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x10
+               bitmask:    0x40
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x18
+               bitmask:    0x40
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x14
+               bitmask:    0x40
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x16
+               bitmask:    0x40
+               polarity:   negative
+    - name:               16
+      switch_device:      0
+      switch_device_port: 15
+      pluggable:          True
+      connector:          SFP_PLUS
+      max_speed:          10000
+      speeds:             [10000,1000]  # supported speeds in Mb/S
+      capabilities:       [enet10G, enet1G]
+      subports:           []
+      supported_modules:  [TBD]
+      module_eeprom:      xg16
+      module_signals:         # device - hex address - bit mask
+            sfpp_tx_disable:
+               device:     cpld0
+               register:   0x10
+               bitmask:    0x80
+               #polarity:   negative
+            sfpp_tx_fault:
+               device:     cpld0
+               register:   0x18
+               bitmask:    0x80
+               polarity:   negative
+            sfpp_rx_loss:
+               device:     cpld0
+               register:   0x14
+               bitmask:    0x80
+               polarity:   negative
+            sfpp_mod_present:
+               device:     cpld0
+               register:   0x16
+               bitmask:    0x80
+               polarity:   negative

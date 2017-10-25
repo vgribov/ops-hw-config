@@ -1,0 +1,164 @@
+manufacturer:    Pegatron
+product_name:    Zequo5400
+version:         '1'
+
+buses:
+    -   name:       i2c_0
+        dev_name:   /dev/i2c-0
+        smbus:      true
+
+devices:
+    -   name:       cpld0
+        bus:        i2c_0
+        dev_type:   cpld
+        address:    0x30
+    -   name:       fru_eeprom
+        bus:        i2c_0
+        dev_type:   fru_eeprom
+        address:    0x57
+
+    -   name:       xg5
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x13
+              data:     [ 0xef ]
+        post:
+            - device:   cpld0
+              register: 0x13
+              data:     [ 0xff ]
+    -   name:       xg6
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x13
+              data:     [ 0xdf ]
+        post:
+            - device:   cpld0
+              register: 0x13
+              data:     [ 0xff ]
+    -   name:       xg7
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x13
+              data:     [ 0xbf ]
+        post:
+            - device:   cpld0
+              register: 0x13
+              data:     [ 0xff ]
+    -   name:       xg8
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x13
+              data:     [ 0x7f ]
+        post:
+            - device:   cpld0
+              register: 0x13
+              data:     [ 0xff ]
+    -   name:       xg9
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xfe ]
+        post:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xff ]
+    -   name:       xg10
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xfd ]
+        post:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xff ]
+    -   name:       xg11
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xfb ]
+        post:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xff ]
+    -   name:       xg12
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xf7 ]
+        post:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xff ]
+    -   name:       xg13
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xef ]
+        post:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xff ]
+    -   name:       xg14
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xdf ]
+        post:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xff ]
+    -   name:       xg15
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xbf ]
+        post:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xff ]
+    -   name:       xg16
+        bus:        i2c_0
+        dev_type:   sfpp
+        address:    0x50
+        pre:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0x7f ]
+        post:
+            - device:   cpld0
+              register: 0x12
+              data:     [ 0xff ]
+init:
